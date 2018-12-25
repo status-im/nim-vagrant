@@ -1,0 +1,42 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+provider: virtualbox
+
+folders:
+    - map: .
+      to: /home/vagrant/Code
+
+sites:
+    - map: homestead.test
+      to: /home/vagrant/Code/Project/public
+
+databases:
+    - homestead
+
+#variables:
+#    - key: APP_ENV
+#      value: local
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+ports:
+    - send: 8545
+      to: 8545
+    - send: 30301
+      to: 30301
+    - send: 30302
+      to: 30302
+    - send: 30303
+      to: 30303
+    - send: 30304
+      to: 30304
+    - send: 30305
+      to: 30305
+    - send: 30306
+      to: 30306
